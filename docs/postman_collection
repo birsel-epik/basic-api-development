@@ -1,0 +1,388 @@
+{
+	"info": {
+		"_postman_id": "166c2230-6c56-4def-8c85-31c86259b1da",
+		"name": "API-Development",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23474653"
+	},
+	"item": [
+		{
+			"name": "User Registration",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJpdiI6IjZmMVV1Q0pldlZFRENla1lJTDNhcWc9PSIsInZhbHVlIjoibDFXdkU1cUdYbWkzdTJva09ibGN3M0JWYUFWUzRCZDFxNjk0Sy9uNnlKU3ZaY1VpNEYzNlUvVXVxSXhNaGVVcmJYTnMwKzE2V0RYaGorUGkyaGJzek9CL2QwWjh6QThvcnR5ZkY0aHpxcXpDOFF4dHc4TVFCRmk5bG5GVEttZ3MiLCJtYWMiOiJlY2JkMzJiNjUxYWE4MjZiM2U1Y2M3OTA3YWZmODI4MjAyNzEwMjhmMTJiNjU1YzZiZTQ5MDNkYzZkMDEyYzIxIiwidGFnIjoiIn0%3D",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Test User\",\n  \"email\": \"test@example.com\",\n  \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://basic-api-development.test/api/register",
+					"protocol": "http",
+					"host": [
+						"basic-api-development",
+						"test"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "User Registration"
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://basic-api-development.test/api/login",
+					"protocol": "http",
+					"host": [
+						"basic-api-development",
+						"test"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "User Login"
+			},
+			"response": []
+		},
+		{
+			"name": "Logged in user information",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJpdiI6IjZmMVV1Q0pldlZFRENla1lJTDNhcWc9PSIsInZhbHVlIjoibDFXdkU1cUdYbWkzdTJva09ibGN3M0JWYUFWUzRCZDFxNjk0Sy9uNnlKU3ZaY1VpNEYzNlUvVXVxSXhNaGVVcmJYTnMwKzE2V0RYaGorUGkyaGJzek9CL2QwWjh6QThvcnR5ZkY0aHpxcXpDOFF4dHc4TVFCRmk5bG5GVEttZ3MiLCJtYWMiOiJlY2JkMzJiNjUxYWE4MjZiM2U1Y2M3OTA3YWZmODI4MjAyNzEwMjhmMTJiNjU1YzZiZTQ5MDNkYzZkMDEyYzIxIiwidGFnIjoiIn0%3D",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://basic-api-development.test/api/user",
+					"protocol": "http",
+					"host": [
+						"basic-api-development",
+						"test"
+					],
+					"path": [
+						"api",
+						"user"
+					]
+				},
+				"description": "Logged in user information"
+			},
+			"response": []
+		},
+		{
+			"name": "List all blogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://basic-api-development.test/api/blogs",
+					"protocol": "http",
+					"host": [
+						"basic-api-development",
+						"test"
+					],
+					"path": [
+						"api",
+						"blogs"
+					]
+				},
+				"description": "List all blogs"
+			},
+			"response": []
+		},
+		{
+			"name": "Create new blog",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"title\": \"Test Blog\",\n  \"content\": \"This is a test blog post.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://basic-api-development.test/api/blogs",
+					"protocol": "http",
+					"host": [
+						"basic-api-development",
+						"test"
+					],
+					"path": [
+						"api",
+						"blogs"
+					]
+				},
+				"description": "Create new blog"
+			},
+			"response": []
+		},
+		{
+			"name": "View a specific blog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://basic-api-development.test/api/blogs/1",
+					"protocol": "http",
+					"host": [
+						"basic-api-development",
+						"test"
+					],
+					"path": [
+						"api",
+						"blogs",
+						"1"
+					]
+				},
+				"description": "###   \nView a specific blog"
+			},
+			"response": []
+		},
+		{
+			"name": "Update blog",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://basic-api-development.test/api/blogs/2",
+					"protocol": "http",
+					"host": [
+						"basic-api-development",
+						"test"
+					],
+					"path": [
+						"api",
+						"blogs",
+						"2"
+					]
+				},
+				"description": "Update blog"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete blog",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://basic-api-development.test/api/blogs/2",
+					"protocol": "http",
+					"host": [
+						"basic-api-development",
+						"test"
+					],
+					"path": [
+						"api",
+						"blogs",
+						"2"
+					]
+				},
+				"description": "Delete blog"
+			},
+			"response": []
+		},
+		{
+			"name": "List all comments",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://basic-api-development.test/api/comments",
+					"protocol": "http",
+					"host": [
+						"basic-api-development",
+						"test"
+					],
+					"path": [
+						"api",
+						"comments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"Test Comment\",\r\n  \"content\": \"This is a test blog post.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://basic-api-development.test/api/blogs/2/comments",
+					"protocol": "http",
+					"host": [
+						"basic-api-development",
+						"test"
+					],
+					"path": [
+						"api",
+						"blogs",
+						"2",
+						"comments"
+					]
+				},
+				"description": "Create new comment"
+			},
+			"response": []
+		},
+		{
+			"name": "List comments for a blog",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://basic-api-development.test/api/blogs/2/comments",
+					"protocol": "http",
+					"host": [
+						"basic-api-development",
+						"test"
+					],
+					"path": [
+						"api",
+						"blogs",
+						"2",
+						"comments"
+					]
+				},
+				"description": "List comments for a blog"
+			},
+			"response": []
+		},
+		{
+			"name": "View a specific comment",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://basic-api-development.test/api/comments/2",
+					"protocol": "http",
+					"host": [
+						"basic-api-development",
+						"test"
+					],
+					"path": [
+						"api",
+						"comments",
+						"2"
+					]
+				},
+				"description": "View a specific comment"
+			},
+			"response": []
+		},
+		{
+			"name": "Update comment",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "http://basic-api-development.test/api/comments/2",
+					"protocol": "http",
+					"host": [
+						"basic-api-development",
+						"test"
+					],
+					"path": [
+						"api",
+						"comments",
+						"2"
+					]
+				},
+				"description": "Update comment"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete comment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://basic-api-development.test/api/comments/2",
+					"protocol": "http",
+					"host": [
+						"basic-api-development",
+						"test"
+					],
+					"path": [
+						"api",
+						"comments",
+						"2"
+					]
+				},
+				"description": "Delete comment"
+			},
+			"response": []
+		}
+	]
+}
